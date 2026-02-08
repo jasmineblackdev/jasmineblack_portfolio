@@ -35,7 +35,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Workout tracking and progress trends
 - Designed for real gym constraints (one-handed use, low attention)
 
-🔗 Repo: https://github.com/jasmineblackdev/FormIQ
+🔗 Repo: https://formwise-fit.lovable.app
 
 ---
 
@@ -48,7 +48,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Low-friction data entry
 - Designed to support long-term adherence
 
-🔗 Repo: https://github.com/jasmineblackdev/MacroCore
+🔗 Repo: https://core-macro-ai.lovable.app
 
 ---
 
@@ -61,7 +61,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Simplified dashboards and insights
 - Supportive, non-judgmental design language
 
-🔗 Repo: https://github.com/jasmineblackdev/BalanceIQ
+🔗 Repo: https://balanceiq-score-master.lovable.app
 
 ---
 
@@ -90,6 +90,27 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 🔗 Repo: https://jasmineblackdev.github.io/artifex-app/
 
 ---
+
+### 🏋🏽‍♂️ MegaFlex — Gym Website Redesign
+Role: UX / UI Designer
+Platform: Web
+Full website restructure for a commercial gym
+Improved content hierarchy and conversion flow
+Modern, high-contrast UI optimized for mobile
+Reduced text-heavy layouts into scannable sections
+🔗 Repo / Live: https://jasmineblackdev.github.io/megaflex-reimagined/
+
+
+---
+
+###🧬 Metabolic Reset Clinic — Healthcare Website Redesign
+Role: UX / Product Designer
+Platform: Web
+UX audit and redesign for a metabolic health clinic
+Simplified patient education and service discovery
+Trust-focused design for medical audiences
+Conversion-optimized layout for consultations
+🔗 Repo / Live: https://jasmineblackdev.github.io/vitality-redesign/
 
 ## 🛠️ Tools & Tech
 
