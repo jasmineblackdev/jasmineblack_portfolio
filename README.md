@@ -149,9 +149,9 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 
 ## 📫 Let’s Connect
 
-- 🌐 Portfolio: jasmineblack.webflow.io  
+- 🌐 Portfolio: jasmineblack.vercel.app  
 - 💻 GitHub: https://github.com/jasmineblackdev  
-- 📧 Email: jasmineblack@yourdomain.com  
+- 📧 Email: jazzblackartist@gmail.com 
 
 ---
 
