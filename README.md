@@ -87,7 +87,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Designer-focused workflows
 - Decision-reduction UX (not infinite options)
 
-🔗 Repo: https://github.com/jasmineblackdev/Artifex
+🔗 Repo: https://jasmineblackdev.github.io/artifex-app/
 
 ---
 
