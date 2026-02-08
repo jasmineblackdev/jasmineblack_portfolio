@@ -100,12 +100,12 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Modern, high-contrast UI optimized for mobile
 - Reduced text-heavy layouts into scannable sections
 - 
-🔗 Repo / Live: https://jasmineblackdev.github.io/megaflex-reimagined/
+🔗 Repo: https://jasmineblackdev.github.io/megaflex-gym/
 
 
 ---
 
-###🧬 Metabolic Reset Clinic — Healthcare Website Redesign
+### 🧬 Metabolic Reset Clinic — Healthcare Website Redesign
 **Role:** UX / Product Designer
 **Platform:** Web
 - UX audit and redesign for a metabolic health clinic
@@ -113,7 +113,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Trust-focused design for medical audiences
 - Conversion-optimized layout for consultations
 - 
-🔗 Repo / Live: https://jasmineblackdev.github.io/vitality-redesign/
+🔗 Repo: https://radiant-reset-clinic.lovable.app
 
 ## 🛠️ Tools & Tech
 
