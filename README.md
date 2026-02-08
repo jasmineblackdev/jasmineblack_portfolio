@@ -74,7 +74,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Trust, safety, and intent-driven UX
 - Shared-activity conversation prompts
 
-🔗 Repo: https://github.com/jasmineblackdev/Spotter
+🔗 Repo: https://jasmineblackdev.github.io/Spotter/
 
 ---
 
