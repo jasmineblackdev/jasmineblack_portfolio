@@ -113,7 +113,7 @@ I specialize in turning **complex systems into intuitive experiences** across fi
 - Trust-focused design for medical audiences
 - Conversion-optimized layout for consultations
 - 
-🔗 Repo: https://radiant-reset-clinic.lovable.app
+🔗 Repo: https://jasmineblackdev.github.io/metabolic-reset-clinic/
 
 ## 🛠️ Tools & Tech
 
