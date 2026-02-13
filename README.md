@@ -3,7 +3,7 @@
 **UX & Product Designer | Mobile, SaaS & Consumer Apps**  
 Designing intuitive, scalable digital products backed by real development.
 
-🌐 **Portfolio:** jasmineblack.vercel.app
+🌐 **Portfolio:** https://jasmineblack.vercel.app <br>
 💻 **GitHub:** https://github.com/jasmineblackdev  
 📍 Charlotte, NC
 
