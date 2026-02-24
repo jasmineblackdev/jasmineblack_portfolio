@@ -4,8 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Work", path: "/" },
-  { label: "Case Studies", path: "/case-studies" },
+  { label: "Work", path: "/case-studies" },
   { label: "Other Work", path: "/other-work" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
@@ -29,7 +28,7 @@ const Navbar = () => {
               key={item.path}
               to={item.path}
               className={`text-sm font-body transition-colors hover:text-accent ${
-                location.pathname === item.path
+                location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                   ? "text-foreground font-medium"
                   : "text-muted-foreground"
               }`}
@@ -65,7 +64,7 @@ const Navbar = () => {
                   to={item.path}
                   onClick={() => setMobileOpen(false)}
                   className={`text-sm font-body transition-colors ${
-                    location.pathname === item.path
+                    location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                       ? "text-foreground font-medium"
                       : "text-muted-foreground"
                   }`}

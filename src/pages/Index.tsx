@@ -97,6 +97,14 @@ const Index = () => {
               <CaseStudyCard key={cs.slug} {...cs} index={i} />
             ))}
           </div>
+          <div className="mt-12 text-center">
+            <Link
+              to="/case-studies"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors font-body"
+            >
+              View all work <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

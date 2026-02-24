@@ -37,9 +37,13 @@ export interface CaseStudySummary {
 
 export interface CaseStudyDetail extends CaseStudySummary {
   tagline: string;
+  timeline: string;
+  tools: string;
   overview: string;
   problem: string;
   users: string;
+  goals: string[];
+  constraints: string[];
   myRole: string;
   solution: string;
   designApproach: string[];
@@ -101,6 +105,8 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     tagline: "AI-Powered Exercise Form Analysis App",
     role: "UX Designer, Product Designer",
     platform: "Mobile (iOS-first)",
+    timeline: "4 weeks",
+    tools: "Figma",
     subtitle: "AI-powered exercise form analysis app",
     image: formiqImg,
     slug: "formiq",
@@ -110,6 +116,18 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Most fitness apps focus on tracking reps and weight, but poor exercise form remains a leading cause of injuries and stalled progress. Beginners have no feedback loop, and serious lifters have no way to objectively assess their technique between sessions with a coach. The gap between intent and execution is invisible — until something goes wrong.",
     users:
       "Beginner lifters seeking safe fundamentals, intermediate gym-goers trying to break plateaus, and advanced strength athletes who train without consistent access to coaching.",
+    goals: [
+      "Design a sub-30-second core loop: Record → Analyze → Review, completable with one hand mid-workout",
+      "Surface AI form scores visually-first so users grasp feedback at a glance without reading during a set",
+      "Build a modular component system that scales to 20+ screens without visual inconsistency",
+      "Establish a developer-ready spec layer from the start — not a concept deck, a real handoff",
+    ],
+    constraints: [
+      "Solo project — no dev team, no user testing lab, no budget",
+      "Must be technically feasible with existing AI pose-detection models (PoseNet / MediaPipe)",
+      "iOS-first: all tap targets, spacing, and interactions follow Apple HIG minimums",
+      "Full UI system scoped to 4 weeks — forced strict prioritization of the core loop before any secondary features",
+    ],
     myRole:
       "Led end-to-end product design — from concept definition through high-fidelity UI. Responsible for user flows, component architecture, interaction design, and developer handoff specifications.",
     solution:
@@ -163,6 +181,8 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     tagline: "Adaptive Nutrition & Macro Tracking App",
     role: "UX Designer, Product Strategist",
     platform: "Mobile",
+    timeline: "3 weeks",
+    tools: "Figma",
     subtitle: "Adaptive nutrition & macro tracking app",
     image: macrocoreImg,
     slug: "macrocore",
@@ -172,6 +192,18 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Nutrition apps overwhelm users with manual food logging, inconsistent tracking interfaces, and static macro targets that never adjust. As weight, training intensity, and goals evolve, these apps fall behind. Users either burn out from over-logging or lose trust when the numbers stop making sense.",
     users:
       "Active individuals managing body composition goals — from casual gym members logging meals for the first time to physique competitors who need precision without being buried in manual entry.",
+    goals: [
+      "Reduce daily logging to 5 taps or fewer — the drop-off point identified across competitive app audits",
+      "Present dense macro data at a glance via visual-first ring charts, not spreadsheet rows",
+      "Make weekly target recalculation feel transparent and trustworthy, not like a black box",
+      "Design full light and dark mode at equal fidelity — neither as an afterthought",
+    ],
+    constraints: [
+      "No live nutritional database — UI designed for future USDA / Edamam API integration",
+      "Solo project, no user interviews conducted — design decisions grounded in competitive analysis and pattern reasoning",
+      "Weekly recalculation logic must be surfaced clearly to prevent user distrust when targets shift",
+      "Scoped to 3 weeks — secondary features (barcode scan, wearable sync) deferred to V2",
+    ],
     myRole:
       "Led UX strategy and product design. Defined information architecture, designed the nutrition dashboard and daily logging flow, and established the full visual design system including both light and dark mode.",
     solution:
@@ -224,6 +256,8 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     tagline: "Personal Finance Advisor in Your Pocket",
     role: "UX Designer, Brand Designer",
     platform: "Mobile",
+    timeline: "5 weeks",
+    tools: "Figma",
     subtitle: "Personal finance advisor in your pocket",
     image: balanceiqImg,
     slug: "balanceiq",
@@ -233,6 +267,18 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Personal finance apps default to data dumps — transaction lists, percentage breakdowns, and budget bars — without telling users what any of it means or what to do next. For users living paycheck-to-paycheck, this creates paralysis, not action. The interface itself becomes another source of financial anxiety.",
     users:
       "Young adults (22–35) new to intentional budgeting, individuals recovering from periods of financial stress, and users who find traditional banking apps cold, confusing, and emotionally discouraging.",
+    goals: [
+      "Replace anxiety-inducing raw financial data with a single actionable daily number — 'Safe to Spend'",
+      "Design onboarding that builds trust and delivers value before asking for sensitive financial information",
+      "Establish a brand voice that feels human and supportive, not clinical or judgmental",
+      "Create a color and feedback system that avoids shame framing around overspending",
+    ],
+    constraints: [
+      "No live bank integration — designed for future Plaid API connection",
+      "Must handle zero-balance and debt-heavy user scenarios without shame or dead-end states",
+      "Color system must avoid red as a primary alert color — shame response increases abandonment",
+      "5-week timeline — AI Advisor, Bills, and Savings screens prioritized; investment tracking deferred to V2",
+    ],
     myRole:
       "Led UX design, visual design, and brand identity. Defined the design language, built the onboarding flow and dashboard architecture, and established the component system and tone of voice.",
     solution:
@@ -286,6 +332,8 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     tagline: "Fitness-Focused Dating & Gym Buddy App",
     role: "UX/Product Designer",
     platform: "Mobile App",
+    timeline: "4 weeks",
+    tools: "Figma",
     subtitle: "Fitness-focused dating & gym buddy app",
     image: spotterImg,
     slug: "spotter",
@@ -295,6 +343,18 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Dating apps built around appearance-first matching consistently fail fitness-oriented users. Lifestyle compatibility — training schedule, workout style, physical discipline — is invisible in standard profiles. Matching with someone who actually shares your gym life is mostly luck.",
     users:
       "Gym-dedicated singles (20–35) — from recreational gym-goers to competitive athletes — who want meaningful connections built on shared lifestyle values, not just swipes.",
+    goals: [
+      "Surface training compatibility data above physical appearance on every match card — the core product differentiator",
+      "Design onboarding that captures fitness identity through engaging inputs, not intimidating form fields",
+      "Build workout scheduling natively into the messaging flow — no navigation away from an active thread",
+      "Make safety features first-class and visible on the public profile, not buried in settings",
+    ],
+    constraints: [
+      "Safety patterns mandatory — boundary-setting and reporting must be designed upfront, not retrofitted",
+      "Must serve the full fitness spectrum from casual gym-goers to competitive athletes without excluding either",
+      "Fitness profile setup required before swiping — short-term onboarding friction accepted for long-term match quality",
+      "4-week scope — geolocation gym matching and wearable sync deferred to V2",
+    ],
     myRole:
       "Led full product design — user research framing, onboarding flow, matching system UI, and interaction design. Responsible for the product voice, safety design patterns, and inclusive design framework.",
     solution:
@@ -346,6 +406,8 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     tagline: "AI-Powered Design Ideation Software",
     role: "UX Designer, Product Designer",
     platform: "Web Software (SaaS)",
+    timeline: "3 weeks",
+    tools: "Figma",
     subtitle: "AI-powered design ideation software",
     image: artifexImg,
     slug: "artifex",
@@ -355,6 +417,18 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Early-stage designers and solo founders waste weeks trying to establish visual direction for new products. Mood boards take hours to build, and AI image tools produce aesthetically random results with no strategic rationale. The result is either decision paralysis or expensive agency engagements for what should be a fast, confident first step.",
     users:
       "Early-stage product designers and founders who need to move fast, design agencies conducting initial client discovery, and creative leads exploring visual direction before committing to full brand work.",
+    goals: [
+      "Turn a structured project brief into 3 strategic design directions with clear rationale — not random AI imagery",
+      "Make the input flow feel fast and structured, eliminating blank-page anxiety without exposing prompt engineering",
+      "Design the product's own visual identity as a portfolio piece — it must demonstrate the quality it claims to produce",
+      "Output format must be usable in a client presentation the day it's generated, not just visually interesting",
+    ],
+    constraints: [
+      "Output capped at exactly 3 directions — more recreates the creative paralysis the product exists to solve",
+      "No free-text prompt fields — guided input only to ensure consistent, high-quality output regardless of user skill",
+      "Desktop-first SaaS layout — export functionality and presentation-readiness built into the design from the start",
+      "3-week timeline — Figma plugin integration and live OpenAI backend deferred to V2",
+    ],
     myRole:
       "Led UX design and product strategy. Defined the core user flow, designed the input/output system, and established the visual design language for the product itself — which needed to demonstrate the quality it claimed to produce.",
     solution:

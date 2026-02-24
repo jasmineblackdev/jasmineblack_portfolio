@@ -12,7 +12,7 @@ const CaseStudyDetail = () => {
       <div className="max-w-6xl mx-auto px-6 py-32 text-center">
         <h1 className="font-display text-2xl font-bold text-foreground">Case study not found</h1>
         <Link to="/case-studies" className="text-accent mt-4 inline-block font-body">
-          ← Back to case studies
+          ← Back to work
         </Link>
       </div>
     );
@@ -31,18 +31,28 @@ const CaseStudyDetail = () => {
             to="/case-studies"
             className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors font-body mb-8"
           >
-            <ArrowLeft size={14} /> All Case Studies
+            <ArrowLeft size={14} /> All Work
           </Link>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground">{study.title}</h1>
             <p className="text-xl text-muted-foreground font-body mt-3">{study.tagline}</p>
-            <div className="flex flex-wrap gap-4 mt-6 text-sm font-body">
+            <div className="flex flex-wrap gap-3 mt-6 text-sm font-body">
               <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground">
                 <strong>Role:</strong> {study.role}
               </span>
               <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground">
                 <strong>Platform:</strong> {study.platform}
               </span>
+              {study.timeline && (
+                <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground">
+                  <strong>Timeline:</strong> {study.timeline}
+                </span>
+              )}
+              {study.tools && (
+                <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground">
+                  <strong>Tools:</strong> {study.tools}
+                </span>
+              )}
             </div>
           </motion.div>
         </div>
@@ -70,15 +80,48 @@ const CaseStudyDetail = () => {
         {/* Target Users */}
         <Section title="Target Users" content={study.users} />
 
+        {/* Goals & Constraints */}
+        {study.goals && study.goals.length > 0 && (
+          <div>
+            <h2 className="font-display text-2xl font-bold text-foreground mb-6">Goals & Constraints</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-display text-sm font-semibold text-accent uppercase tracking-wide mb-3">Goals</h3>
+                <ul className="space-y-3">
+                  {study.goals.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground font-body">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-[0.45rem] shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {study.constraints && study.constraints.length > 0 && (
+                <div>
+                  <h3 className="font-display text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">Constraints</h3>
+                  <ul className="space-y-3">
+                    {study.constraints.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground font-body">
+                        <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-[0.45rem] shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* My Role */}
         <Section title="My Role" content={study.myRole} />
 
         {/* Solution */}
         <Section title="Solution" content={study.solution} />
 
-        {/* Design Approach */}
+        {/* Process */}
         <BulletSection
-          title="Design Approach"
+          title="Process"
           description="I moved directly into high-fidelity exploration, testing layout decisions at real screen density from the start."
           items={study.designApproach}
         />
