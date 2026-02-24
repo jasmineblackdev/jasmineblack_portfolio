@@ -51,6 +51,7 @@ export interface CaseStudyDetail extends CaseStudySummary {
   decisions: string[];
   outcome: string;
   nextSteps: string[];
+  links?: { label: string; url: string; description: string; primary?: boolean }[];
   screenshots?: { src: string; caption: string }[];
   screenshotRationale?: string[];
   screenshotColumns?: 2 | 3;
@@ -156,6 +157,20 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Live pose-detection overlays using TensorFlow Pose or Apple's Vision framework for real-time in-rep feedback",
       "React Native implementation targeting cross-platform distribution",
       "AI coaching mode that adapts correction cues based on historical progression data",
+    ],
+    links: [
+      {
+        label: "View Live App",
+        url: "https://form-iq-app.vercel.app",
+        description: "Deployed web build of the FormIQ product design",
+        primary: true,
+      },
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/jasmineblackdev",
+        description: "Source code and project structure",
+        primary: false,
+      },
     ],
     screenshots: [
       { src: formiqScreenSplash, caption: "Splash / Onboarding" },

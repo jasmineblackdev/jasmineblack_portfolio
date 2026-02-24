@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 import { caseStudyDetails, slugs } from "@/data/caseStudies";
 
 const CaseStudyDetail = () => {
@@ -54,6 +54,39 @@ const CaseStudyDetail = () => {
                 </span>
               )}
             </div>
+            {/* Project Links */}
+            {study.links && study.links.length > 0 && (
+              <div className="mt-8 pt-6 border-t border-border">
+                <p className="text-xs font-body font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+                  View Project
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {study.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-body transition-colors ${
+                        link.primary
+                          ? "bg-accent text-white hover:opacity-90"
+                          : "border border-border text-muted-foreground hover:text-foreground hover:border-foreground"
+                      }`}
+                    >
+                      {link.label.toLowerCase().includes("github") ? (
+                        <Github size={14} />
+                      ) : (
+                        <ExternalLink size={14} />
+                      )}
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground font-body mt-3 leading-relaxed">
+                  {study.links.find((l) => l.primary)?.description}
+                </p>
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
