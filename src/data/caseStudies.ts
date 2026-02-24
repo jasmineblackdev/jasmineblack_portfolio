@@ -249,6 +249,20 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "AI-powered meal suggestion engine using real-time macro gap analysis",
       "Wearable sync (Apple Watch / Garmin) for dynamic TDEE adjustment based on activity data",
     ],
+    links: [
+      {
+        label: "View Live App",
+        url: "https://macro-core-app.vercel.app",
+        description: "Deployed web build of the MacroCore product design",
+        primary: true,
+      },
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/jasmineblackdev",
+        description: "Source code and project structure",
+        primary: false,
+      },
+    ],
     screenshots: [
       { src: macrocoreScreenSplash, caption: "Splash / Onboarding" },
       { src: macrocoreScreenGoal, caption: "Goal Setting" },
