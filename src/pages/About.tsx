@@ -2,30 +2,11 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
 const experience = [
-  {
-    role: "UI/UX Designer",
-    company: "Hype",
-    period: "2022 – Present",
-    desc: "Leading product and visual design for client projects across fitness, wellness, and finance. Responsible for end-to-end design from discovery to developer handoff.",
-  },
-  {
-    role: "Lead UX/UI Designer",
-    company: "Response Mine Interactive",
-    period: "2021 – 2022",
-    desc: "Designed conversion-focused digital experiences for direct-response clients. Owned the UX audit, wireframe, and hi-fi delivery process across multiple simultaneous accounts.",
-  },
-  {
-    role: "Senior Digital Marketing Designer",
-    company: "Viktoria Deann",
-    period: "2020 – 2021",
-    desc: "Produced brand and digital assets for e-commerce clients. Designed landing pages, ad creative, and email campaigns optimized for conversion.",
-  },
-  {
-    role: "Graphic / Web Designer",
-    company: "Sentinel Home Health",
-    period: "2019 – 2020",
-    desc: "Designed internal and external-facing materials. Built and maintained the company website, created marketing collateral and patient-facing print and digital assets.",
-  },
+  { role: "UI/UX Designer", company: "Hype", period: "2022 – Present" },
+  { role: "Senior Digital Marketing Designer", company: "Viktoria Deann", period: "2022 – 2024" },
+  { role: "Lead UX/UI Designer", company: "Response Mine Interactive", period: "2022 – 2023" },
+  { role: "Jr. UI/UX Designer", company: "Mehe, LLC", period: "2019 – Present" },
+  { role: "Graphic / Web Designer", company: "Sentinel Home Health", period: "2019 – 2022" },
 ];
 
 const education = [
@@ -93,15 +74,14 @@ const About = () => {
         {/* Experience */}
         <div>
           <h2 className="font-display text-2xl font-bold text-foreground mb-6">Experience</h2>
-          <div className="space-y-8">
+          <div className="space-y-4">
             {experience.map((job) => (
-              <div key={job.company} className="grid md:grid-cols-[1fr_2fr] gap-2 md:gap-8">
+              <div key={job.company + job.period} className="flex items-baseline justify-between gap-4">
                 <div>
-                  <p className="font-display text-sm font-semibold text-foreground">{job.role}</p>
-                  <p className="text-sm text-accent font-body">{job.company}</p>
-                  <p className="text-xs text-muted-foreground font-body mt-0.5">{job.period}</p>
+                  <span className="font-display text-sm font-semibold text-foreground">{job.role}</span>
+                  <span className="text-sm text-muted-foreground font-body"> · {job.company}</span>
                 </div>
-                <p className="text-sm text-muted-foreground font-body leading-relaxed">{job.desc}</p>
+                <p className="text-xs text-muted-foreground font-body shrink-0">{job.period}</p>
               </div>
             ))}
           </div>
@@ -110,14 +90,14 @@ const About = () => {
         {/* Education */}
         <div>
           <h2 className="font-display text-2xl font-bold text-foreground mb-6">Education</h2>
-          <div className="space-y-5">
+          <div className="space-y-4">
             {education.map((ed) => (
-              <div key={ed.degree} className="flex items-start justify-between gap-4">
+              <div key={ed.degree} className="flex items-baseline justify-between gap-4">
                 <div>
-                  <p className="font-display text-sm font-semibold text-foreground">{ed.degree}</p>
-                  <p className="text-sm text-muted-foreground font-body">{ed.school}</p>
+                  <span className="font-display text-sm font-semibold text-foreground">{ed.degree}</span>
+                  <span className="text-sm text-muted-foreground font-body"> · {ed.school}</span>
                 </div>
-                <p className="text-xs text-muted-foreground font-body shrink-0 text-right">{ed.period}</p>
+                <p className="text-xs text-muted-foreground font-body shrink-0">{ed.period}</p>
               </div>
             ))}
           </div>
