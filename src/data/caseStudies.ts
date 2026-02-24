@@ -402,6 +402,20 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Wearable data integration (Apple Watch / Garmin) for verified, dynamic training stats",
       "AI compatibility scoring using logged workout history to improve match quality over time",
     ],
+    links: [
+      {
+        label: "View Live App",
+        url: "https://spotter-seven-pink.vercel.app",
+        description: "Deployed web build of the Spotter product design",
+        primary: true,
+      },
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/jasmineblackdev",
+        description: "Source code and project structure",
+        primary: false,
+      },
+    ],
     screenshots: [
       { src: spotterScreenOnboarding, caption: "Onboarding — Step 1 of 8" },
       { src: spotterScreenProfilePreview, caption: "Profile Preview — Step 8 of 8" },
