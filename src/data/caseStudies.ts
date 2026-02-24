@@ -325,6 +325,20 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "AI-powered spending insight generation using categorization and trend analysis",
       "Financial health score feature using ML to identify behavioral patterns and surface personalized guidance over time",
     ],
+    links: [
+      {
+        label: "View Live App",
+        url: "https://balance-iq-three.vercel.app",
+        description: "Deployed web build of the BalanceIQ product design",
+        primary: true,
+      },
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/jasmineblackdev",
+        description: "Source code and project structure",
+        primary: false,
+      },
+    ],
     screenshots: [
       { src: balanceiqScreenOnboarding, caption: "Onboarding — Take-Home Pay" },
       { src: balanceiqScreenSnapshot, caption: "You're All Set! — Financial Snapshot" },
