@@ -249,20 +249,6 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "AI-powered meal suggestion engine using real-time macro gap analysis",
       "Wearable sync (Apple Watch / Garmin) for dynamic TDEE adjustment based on activity data",
     ],
-    links: [
-      {
-        label: "View Live App",
-        url: "https://macro-core-app.vercel.app",
-        description: "Deployed web build of the MacroCore product design",
-        primary: true,
-      },
-      {
-        label: "GitHub Repository",
-        url: "https://github.com/jasmineblackdev",
-        description: "Source code and project structure",
-        primary: false,
-      },
-    ],
     screenshots: [
       { src: macrocoreScreenSplash, caption: "Splash / Onboarding" },
       { src: macrocoreScreenGoal, caption: "Goal Setting" },
@@ -279,6 +265,20 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Protein, Carbs, and Fats each carry a distinct color label (teal, orange, purple) on the Goals screen, making the three macro values immediately distinguishable at a glance without parsing text.",
       "'How Adjustments Work' is displayed as a transparent, numbered 3-step card — showing users the logic behind macro changes builds trust and reduces the confusion that causes abandonment when targets shift.",
       "The timestamped Adjustment History card gives users a clear audit trail of every macro change, directly addressing the distrust users feel when nutrition apps silently alter their targets.",
+    ],
+    links: [
+      {
+        label: "View Live App",
+        url: "https://macro-core-app.vercel.app",
+        description: "Deployed web build of the MacroCore product design",
+        primary: true,
+      },
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/jasmineblackdev",
+        description: "Source code and project structure",
+        primary: false,
+      },
     ],
   },
 
