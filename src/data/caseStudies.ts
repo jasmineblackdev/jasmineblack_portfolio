@@ -102,7 +102,7 @@ export const caseStudies: CaseStudySummary[] = [
 export const caseStudyDetails: Record<string, CaseStudyDetail> = {
   formiq: {
     title: "FormIQ",
-    tagline: "AI-Powered Exercise Form Analysis App",
+    tagline: "AI form coach built for the gym floor, not the app store",
     role: "UX Designer, Product Designer",
     platform: "Mobile (iOS-first)",
     timeline: "4 weeks",
@@ -111,11 +111,11 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     image: formiqImg,
     slug: "formiq",
     overview:
-      "FormIQ is an AI-powered fitness app that acts as a pocket personal trainer. Users record their exercises, receive real-time form scores and correction cues, and track technique improvement over time — making expert feedback accessible without a coach in the room.",
+      "FormIQ turns a phone into a form spotter. Users record a set, receive an AI-generated score and plain-language correction cues within seconds, and track technique trends across sessions. The entire product is designed for the gym floor: dark-mode-first, one-handed, and built around a sub-30-second core loop — because feedback that arrives after the workout is finished doesn't change how you lifted.",
     problem:
-      "Most fitness apps focus on tracking reps and weight, but poor exercise form remains a leading cause of injuries and stalled progress. Beginners have no feedback loop, and serious lifters have no way to objectively assess their technique between sessions with a coach. The gap between intent and execution is invisible — until something goes wrong.",
+      "Most fitness apps count reps. None of them watch how you lift. Poor form is the leading cause of gym injuries and stalled progress — but the only solution most people have access to is a personal trainer they can't afford or a training partner who isn't always there. The feedback gap is invisible until something goes wrong.",
     users:
-      "Beginner lifters seeking safe fundamentals, intermediate gym-goers trying to break plateaus, and advanced strength athletes who train without consistent access to coaching.",
+      "Intermediate gym-goers (18–35) who train consistently but don't have regular access to coaching. They have enough experience to care about technique but not enough certainty to self-correct confidently. They'll use their phone between sets — one hand, 30 seconds, zero patience for multi-step flows.",
     goals: [
       "Design a sub-30-second core loop: Record → Analyze → Review, completable with one hand mid-workout",
       "Surface AI form scores visually-first so users grasp feedback at a glance without reading during a set",
@@ -131,26 +131,27 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     myRole:
       "Led end-to-end product design — from concept definition through high-fidelity UI. Responsible for user flows, component architecture, interaction design, and developer handoff specifications.",
     solution:
-      "A mobile-first iOS app that analyzes recorded exercise footage using AI, scores technique across key movement checkpoints, and delivers plain-language correction cues within seconds of recording.",
+      "A camera-first mobile app with a one-tap record flow, AI form scoring, and plain-language correction cues delivered before the next set starts. A history view tracks technique trends across sessions so users can see whether they're actually improving — not just whether they worked out.",
     designApproach: [
-      "Began layout exploration directly in high-fidelity Figma screens, testing visual hierarchy and component density at real screen size",
-      "Prioritized the core Record → Analyze → Review loop before building any secondary features",
-      "Iterated on the scoring UI to balance data richness with instant readability for sweaty, distracted gym environments",
-      "Built a modular component system to maintain design consistency across 20+ screens",
+      "Started with the Analysis result screen — the moment the product lives or dies. Designed what a perfect feedback card looks like before building anything else. If the output isn't readable in under 5 seconds, the rest of the product is irrelevant.",
+      "Explored three scoring formats: text report, number only, and ring score with color-coded breakdown. The ring won — it communicates pass/fail before the user reads a single word, which matters in a gym environment where attention is split.",
+      "Mapped every interactive element to a one-handed thumb zone before finalizing layout. Record, stop, and review all land in the bottom third — the only reachable zone during an active session.",
+      "Designed the Form History empty state as an active entry point, not a dead end — it explains the save flow and surfaces a direct CTA. A zero-content screen that converts nothing is a churn trigger.",
     ],
     designRationale: [
-      "Oversized form score indicators — visual-first scoring lets users process feedback at a glance without reading dense text mid-workout",
-      "Progressive disclosure — basic feedback surfaces immediately; detailed joint-by-joint breakdown is one tap deeper for users who want it",
-      "All interactive elements meet 44px minimum tap targets, optimized for one-handed use during an active set",
-      "High-contrast color system ensures legibility under bright gym lighting and at varied phone brightness settings",
+      "Camera-first entry — the app opens to record, not a home screen or dashboard. Every tap before the camera is a potential abandoned session.",
+      "Ring score leads the Analysis screen before any text — visual verdict first, detailed breakdown second. Users get the answer in under a second.",
+      "Color-coded feedback cards (green = strength, amber = correction) let users triage positive vs. corrective feedback without reading every line mid-workout.",
+      "Freemium counter ('4 free analyses remaining') surfaces in the header subtitle, not a modal — transparent about limits without hijacking the result screen.",
     ],
     decisions: [
-      "Chose visual scoring over text summaries to reduce cognitive load in-session — numbers and color-coded icons communicate faster than paragraphs",
-      "Implemented a camera-first entry flow (record first, account setup second) to eliminate friction at the most critical user touchpoint",
-      "Deferred social sharing and community features to V2 to keep V1 focused on the core form-feedback value proposition — shipping focused beats shipping everything",
+      "Camera-first entry flow over a traditional home screen — the product's entire value happens in the record flow. Every screen before the camera is friction that costs sessions.",
+      "Ring score over text feedback — tested both. Ring communicates pass/fail in under a second. Text requires sustained attention that gym users don't have between sets.",
+      "Mandatory exercise selection before analysis — removing this created ambiguous results. Short-term friction justified by accurate, trustworthy output.",
+      "Deferred social, community, and sharing features to V2 entirely — not because they aren't valuable, but because shipping a focused V1 well is worth more than shipping everything at half quality.",
     ],
     outcome:
-      "FormIQ demonstrates the constraint-driven product thinking required to ship a technically complex mobile experience. The design is developer-ready with documented component specs and an active GitHub repository — not a concept deck, a real product foundation.",
+      "FormIQ is a complete, developer-ready product foundation — 20+ screens, a documented component system, and an active GitHub repository. The core loop (Record → Analyze → Review) is fully designed end-to-end with no placeholder screens. The design is production-ready for a React Native build.",
     nextSteps: [
       "Live pose-detection overlays using TensorFlow Pose or Apple's Vision framework for real-time in-rep feedback",
       "React Native implementation targeting cross-platform distribution",
@@ -178,7 +179,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
 
   macrocore: {
     title: "MacroCore",
-    tagline: "Adaptive Nutrition & Macro Tracking App",
+    tagline: "Macro tracking that adjusts to your progress, not the other way around",
     role: "UX Designer, Product Strategist",
     platform: "Mobile",
     timeline: "3 weeks",
@@ -187,11 +188,11 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     image: macrocoreImg,
     slug: "macrocore",
     overview:
-      "MacroCore is a smart nutrition companion that adapts macro targets based on body measurements, activity patterns, and adherence data — removing the guesswork from long-term tracking without burying users in data entry.",
+      "MacroCore tracks daily macros and automatically recalculates weekly targets based on progress inputs — removing the most common failure point in long-term nutrition tracking: the static target that stops making sense as you change. The interface is built around a five-tap logging flow and a visual-first ring dashboard that communicates daily status at a glance, in both light and dark mode.",
     problem:
-      "Nutrition apps overwhelm users with manual food logging, inconsistent tracking interfaces, and static macro targets that never adjust. As weight, training intensity, and goals evolve, these apps fall behind. Users either burn out from over-logging or lose trust when the numbers stop making sense.",
+      "Nutrition apps are built for short-term motivation, not long-term adherence. They front-load logging complexity, surface data as raw numbers, and set targets that never update. Most users abandon them within two weeks — not because tracking doesn't work, but because the app never tells them whether it is. The numbers stay the same whether you're making progress or not.",
     users:
-      "Active individuals managing body composition goals — from casual gym members logging meals for the first time to physique competitors who need precision without being buried in manual entry.",
+      "Active adults managing body composition — from casual gym-goers logging meals for the first time to experienced athletes who need precision without overhead. They want to know if today was a good day in under 10 seconds. They don't want to open four screens to log lunch.",
     goals: [
       "Reduce daily logging to 5 taps or fewer — the drop-off point identified across competitive app audits",
       "Present dense macro data at a glance via visual-first ring charts, not spreadsheet rows",
@@ -207,26 +208,27 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     myRole:
       "Led UX strategy and product design. Defined information architecture, designed the nutrition dashboard and daily logging flow, and established the full visual design system including both light and dark mode.",
     solution:
-      "A mobile app with a simplified daily logging interface and an intelligent target-adjustment engine that recalculates macros weekly based on progress inputs — not daily noise. The app supports both light and dark mode, adapting to user system preferences.",
+      "A mobile app with a stripped-down daily logging interface, a visual ring dashboard for at-a-glance macro status, and a transparent weekly recalculation system that shows users exactly why their targets changed. Available in light and dark mode — both designed at full fidelity, neither an afterthought.",
     designApproach: [
-      "Audited five leading nutrition apps (MyFitnessPal, Cronometer, Carbon, MacroFactor, Lose It) to identify friction points and differentiation opportunities",
-      "Moved directly into high-fidelity explorations to test how dense nutritional data could be presented cleanly at mobile scale",
-      "Ran multiple layout iterations on the daily dashboard — the most-opened screen — before expanding to secondary features",
-      "Established a component library around the food logging card to ensure speed and consistency across the product",
+      "Audited MyFitnessPal, Cronometer, Carbon, MacroFactor, and Lose It before opening Figma. The goal was to map where leading apps fail and why — logging friction, data overload, opaque adjustments — and use that to drive every major design decision rather than designing in a vacuum.",
+      "Ran three layout iterations on the Today dashboard — the screen users open multiple times daily. Rejected table format (too much reading), rejected progress bars (ambiguous without context), landed on ring charts. One ring per macro, status readable before a number is read.",
+      "Designed the Adjustment History card before designing the recalculation algorithm screens. Users need to see their target history before they'll trust future changes. Transparency has to be visible before it's needed.",
+      "Built light and dark mode simultaneously, not in sequence. Light mode is clean and clinical for daytime logging. Dark mode reduces eye strain for early-morning and late-night sessions. Both are first-class.",
     ],
     designRationale: [
-      "MacroCore supports both light and dark mode — light mode keeps the interface clean and clinical for daytime use, while dark mode reduces eye strain during early-morning and late-night logging sessions without any user configuration required",
-      "Three-macro ring visualization gives users an instant status check without reading individual gram counts",
-      "Condensed food search results use a two-line card layout (name + macro preview) so users can decide without opening every entry",
-      "Weekly macro recalculation framing reduces panic around single off-days, reinforcing the long-term adherence mindset the product promotes",
+      "Splash tagline — 'One number, not a spreadsheet' — names the competitor failure mode before the user taps anything. It positions MacroCore against every existing nutrition app in one line.",
+      "Ring charts for macro status on the dashboard — three rings, directional at a glance, no math required. Tested against tables and bar charts. Only rings answered 'am I on track today?' without reading.",
+      "Adjustment History shown as a timestamped audit trail — users who don't understand why their targets changed stop trusting the app and abandon it. Showing the history and the logic behind every change directly addresses the most common trust failure in nutrition apps.",
+      "'How Adjustments Work' as a transparent 3-step card on the Goals screen — coaching context delivered passively at the exact moment users are most likely to need it, without a separate tutorial or help section.",
     ],
     decisions: [
-      "Chose weekly macro recalculation over daily to smooth data noise — users overreact to single-day fluctuations, which increases abandonment",
-      "Designed a five-tap food logging flow to reduce friction at the highest drop-off point identified across competitive app audits",
-      "Used color-coded ring charts over spreadsheet-style tables — tested multiple formats before committing based on scan-ability and emotional clarity",
+      "Weekly recalculation instead of daily — daily fluctuations create noise that users interpret as the product being broken. Weekly smoothing matches how bodies actually respond to nutrition changes and reduces panic-driven abandonment.",
+      "Five-tap logging as the design target — identified as the drop-off threshold based on competitive audit. Every additional tap beyond five loses a meaningful percentage of log entries.",
+      "Ring charts over every other format — the single criterion was: 'can you tell if today is on track without reading a number?' Rings were the only format that passed.",
+      "Transparent recalculation logic on the Goals screen — showing users the logic behind target changes is not optional. It's the difference between an app users trust and an app users quietly stop opening.",
     ],
     outcome:
-      "A trust-focused nutrition experience that respects user time and cognitive bandwidth. The design demonstrates the ability to handle information-dense data in a way that feels clean rather than clinical — a key challenge in the health tech space.",
+      "MacroCore is a complete design system for a data-heavy mobile product — dashboard, logging flow, goal-setting onboarding, and adjustment history all fully realized. The light and dark mode systems are production-ready. The design is directly applicable to any health tech, fintech, or analytics product that needs to make dense information feel simple rather than clinical.",
     nextSteps: [
       "Barcode scanning via React Native camera module for instant food lookup",
       "AI-powered meal suggestion engine using real-time macro gap analysis",
@@ -253,7 +255,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
 
   balanceiq: {
     title: "BalanceIQ",
-    tagline: "Personal Finance Advisor in Your Pocket",
+    tagline: "Personal finance that tells you what to do, not just what happened",
     role: "UX Designer, Brand Designer",
     platform: "Mobile",
     timeline: "5 weeks",
@@ -262,11 +264,11 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     image: balanceiqImg,
     slug: "balanceiq",
     overview:
-      "BalanceIQ is a personal finance advisor designed for people who've been failed by spreadsheets and overwhelmed by traditional banking apps. It translates financial complexity into clear, actionable guidance — surfacing one smart next step at a time instead of a wall of raw data.",
+      "BalanceIQ replaces account balances and budget breakdowns with one number that matters: how much you can safely spend today. Built for users who are overwhelmed by money, not just bad at managing it — the app surfaces a single Safe to Spend metric, tracks bills with overdue flags, monitors savings goals, and provides an AI advisor for questions. Everything else is one tap deeper, available when the user is ready.",
     problem:
-      "Personal finance apps default to data dumps — transaction lists, percentage breakdowns, and budget bars — without telling users what any of it means or what to do next. For users living paycheck-to-paycheck, this creates paralysis, not action. The interface itself becomes another source of financial anxiety.",
+      "Finance apps are built for people who are already financially comfortable. Mint, YNAB, and traditional banking apps surface raw data — transaction lists, category breakdowns, debt totals — and call it guidance. For users living close to the edge, opening these apps makes them feel worse, not better. The interface becomes another source of anxiety, and they close it. The people who most need financial tools are the ones most likely to abandon them.",
     users:
-      "Young adults (22–35) new to intentional budgeting, individuals recovering from periods of financial stress, and users who find traditional banking apps cold, confusing, and emotionally discouraging.",
+      "Young adults (22–35) who want help with their finances but avoid apps that make them feel judged. They open a finance app hoping to feel better — not to see a spreadsheet. They'll abandon any product that leads with total debt or requires interpreting a dashboard before they can act.",
     goals: [
       "Replace anxiety-inducing raw financial data with a single actionable daily number — 'Safe to Spend'",
       "Design onboarding that builds trust and delivers value before asking for sensitive financial information",
@@ -282,26 +284,27 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     myRole:
       "Led UX design, visual design, and brand identity. Defined the design language, built the onboarding flow and dashboard architecture, and established the component system and tone of voice.",
     solution:
-      "A mobile app that combines spending categorization with plain-language advice, surfacing one clear 'next best action' per session rather than exposing users to raw financial data they don't know how to act on.",
+      "A mobile app centered on a single hero metric — Safe to Spend — showing exactly how much is available before the next paycheck after committed bills and savings goals are accounted for. Bills tracking flags overdue items in amber. Savings goals show progress with a forward-looking projection. An AI advisor answers financial questions in plain English. The design system removes red entirely as an alert color and replaces clinical finance copy with conversational language throughout.",
     designApproach: [
-      "Began with brand exploration — BalanceIQ needed to feel approachable and empowering, distinctly different from corporate fintech aesthetics",
-      "Designed the onboarding flow to establish trust before asking for sensitive financial data — soft-onboarding as a conversion and trust lever",
-      "Explored multiple dashboard layouts before settling on a card-based system that surfaces one financial signal at a time",
-      "Created a warm, accessible color palette intentionally distinct from the blue-dominant standard in fintech",
+      "Started with brand direction before touching layouts — dark navy, green, and warm white established first. BalanceIQ needed to feel categorically different from every banking app the target user has already abandoned.",
+      "Explored three dashboard models: full account overview (rejected — too much data, requires interpretation), budget category breakdown (rejected — presumes users have categories worth tracking), and single Safe to Spend hero metric (chosen — one number, immediately actionable, no math required).",
+      "Designed onboarding to deliver a BalanceIQ Score and Safe to Spend estimate after three inputs — before any account connection is required. Users needed a reason to trust the product before it asked for anything sensitive.",
+      "Every alert state uses amber, not red. This was a deliberate system-level decision, not a style preference — red triggers a shame response that drives exactly the avoidance behavior the product needs to prevent.",
     ],
     designRationale: [
-      "Card-based dashboard creates focus — each card isolates a single financial insight instead of requiring users to interpret a wall of data simultaneously",
-      "Primary CTA on every screen is always the 'next best action' — reducing decision fatigue for users who are already overwhelmed by their finances",
-      "Conversational UI copy ('You're on track this week') replaces clinical language ('Budget utilization: 68%') to reduce anxiety and increase daily engagement",
-      "Color system uses green/amber/neutral rather than green/red to avoid shame framing around overspending — a critical empathy decision",
+      "Safe to Spend is the homepage hero — not account balance, net worth, or a pie chart. One number that answers the only question users actually open the app to ask: 'Can I spend money today?'",
+      "Overdue bills are flagged amber with an 'OVERDUE' badge at the list level — users see urgency without opening each item, and the warm amber avoids the anxiety spike that red creates.",
+      "Onboarding delivers value before asking for data — the BalanceIQ Score appears after 3 inputs. Value first, trust earned, account connection requested second.",
+      "Conversational copy throughout — 'Getting there!' instead of '68/100', 'You're all set!' instead of 'Setup complete'. Tone is a product decision, not a branding exercise.",
     ],
     decisions: [
-      "Chose qualitative financial framing ('You could save $40 this week') over raw category percentages to drive action rather than just awareness",
-      "Designed a soft-onboarding path that provides value before requiring account connection — removing the biggest trust barrier in consumer fintech",
-      "Avoided surfacing total debt balance prominently on the home screen — research shows this pattern increases app abandonment rather than motivating change",
+      "Safe to Spend as the single homepage metric — tested against account balance display and category breakdown. Safe to Spend was the only format that answered 'what do I do right now?' without requiring interpretation.",
+      "Removed red from the design system as a primary alert color — overdue and overspent states use amber. This was a product decision: red triggers shame, shame causes app abandonment, and BalanceIQ's entire value depends on users staying engaged.",
+      "Onboarding delivers a useful output before requiring account connection — the BalanceIQ Score and Safe to Spend appear at step 3. Removing the connection requirement from the trust-building phase was the single biggest conversion lever in the design.",
+      "AI Advisor opens with quick-action chips ('What can I cut?', 'Am I on track?') instead of a blank input — the blank prompt is a conversion dead zone. Chips guide users toward questions they actually have.",
     ],
     outcome:
-      "A finance product that proves empathy and clarity are design decisions, not afterthoughts. The visual design and brand voice demonstrate how design can make a difficult, high-stakes subject feel human — a critical capability for consumer fintech products.",
+      "BalanceIQ is a complete product design covering onboarding, dashboard, bills, savings, and AI advisor — six fully realized screens with a consistent design language built on one principle: make users feel capable, not judged. The product makes the case that tone, color, and information hierarchy are not aesthetic choices — they are product decisions that directly affect whether people come back.",
     nextSteps: [
       "Plaid API integration for live bank and transaction data",
       "AI-powered spending insight generation using categorization and trend analysis",
@@ -329,7 +332,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
 
   spotter: {
     title: "Spotter",
-    tagline: "Fitness-Focused Dating & Gym Buddy App",
+    tagline: "A dating app where your training stats come before your photo",
     role: "UX/Product Designer",
     platform: "Mobile App",
     timeline: "4 weeks",
@@ -338,11 +341,11 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     image: spotterImg,
     slug: "spotter",
     overview:
-      "Spotter is a fitness-first connection app where your training identity is your profile. Users match based on workout compatibility — training style, schedule, and goals — before defaulting to a traditional photo swipe, creating stronger alignment from the first match.",
+      "Spotter is a fitness-first connection app for gym-dedicated singles who want to meet people who actually share their lifestyle. Training compatibility — workout style, schedule, and goals — surfaces on every match card before photos, flipping the hierarchy of every existing dating app. Workout scheduling is built directly into the conversation flow, removing the friction between 'want to meet?' and 'want to train together?'",
     problem:
-      "Dating apps built around appearance-first matching consistently fail fitness-oriented users. Lifestyle compatibility — training schedule, workout style, physical discipline — is invisible in standard profiles. Matching with someone who actually shares your gym life is mostly luck.",
+      "Dating apps optimized for appearance-first matching consistently fail fitness-focused users. Lifestyle compatibility — training schedule, gym culture, physical commitment — is invisible in a standard profile. You can match with someone attractive and find out three dates in that they think the gym is something other people do. Shared lifestyle values are the strongest predictor of long-term compatibility, and no app surfaces them.",
     users:
-      "Gym-dedicated singles (20–35) — from recreational gym-goers to competitive athletes — who want meaningful connections built on shared lifestyle values, not just swipes.",
+      "Gym-dedicated singles (20–35) who structure their lives around training — from recreational lifters to competitive athletes. They want to know upfront whether a match will understand a 5am alarm, a prep diet, or a Saturday at a meet. A gym filter on Hinge is not a solution.",
     goals: [
       "Surface training compatibility data above physical appearance on every match card — the core product differentiator",
       "Design onboarding that captures fitness identity through engaging inputs, not intimidating form fields",
@@ -358,26 +361,27 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     myRole:
       "Led full product design — user research framing, onboarding flow, matching system UI, and interaction design. Responsible for the product voice, safety design patterns, and inclusive design framework.",
     solution:
-      "A mobile dating and gym-buddy platform where fitness data drives matching logic, training compatibility is visualized on the match card, and workout invite scheduling is built directly into the conversation flow.",
+      "A mobile app where fitness data drives matching logic and training compatibility is the first thing visible on every profile card. Onboarding collects training identity through simple, focused questions. Match cards show training style, frequency, and gym type above the photo — not below it. Workout invite scheduling is a native feature inside the message thread, not a separate flow.",
     designApproach: [
-      "Defined three distinct personas before touching the UI: Serious Lifter, Wellness-Focused User, Casual Gym-Goer — ensuring the design serves the full spectrum",
-      "Designed onboarding to collect fitness data through engaging, low-friction questions rather than intimidating form fields",
-      "Explored multiple match card layouts before settling on a design that surfaces training stats above traditional profile photos",
-      "Iterated on the 'invite to workout' flow to feel natural within a first conversation rather than requiring navigation away from the thread",
+      "Defined three user personas (Serious Lifter, Wellness-Focused, Casual Gym-Goer) before opening Figma — the design had to serve the full fitness spectrum without making any group feel like a second-class user.",
+      "The match card was the highest-stakes design decision in the product. Explored five layouts before landing on the 3-column fitness stat grid above the photo. Every other format buried the differentiator below the fold — which meant Spotter was just Tinder with a gym filter.",
+      "Rewrote onboarding copy from 'Create your profile' to 'Tell us how you train' — the language shift changes what kind of app the user believes they're setting up before they see a single match.",
+      "Designed safety features — boundary statements, block, report — as first-class UI elements visible on the public profile card, not buried in a settings menu. Safety has to be a product value, not a legal checkbox.",
     ],
     designRationale: [
-      "Training stats surface before bio text in the match card — a deliberate hierarchy inversion that communicates Spotter's core differentiator immediately on every profile",
-      "Onboarding steps are framed as 'Tell us how you train' not 'Fill out your profile' — language that shapes user perception of what kind of app this is",
-      "Workout invite is accessible from any message thread without navigation — reducing friction at the moment of spontaneous intent when both users are engaged",
-      "Inclusive gym type selection (CrossFit, powerlifting, yoga, running, casual gym) ensures the design doesn't exclude non-traditional fitness identities",
+      "3-column fitness stat grid (Style, Frequency, Trains) sits above the photo on every match card — the hierarchy inversion is the entire product. If compatibility data lives below the photo, the differentiator disappears.",
+      "Dual intent badges ('85% Spot Match' + 'Open to Dating') appear on the card without opening the profile — users get compatibility score and romantic openness in one glance, zero taps.",
+      "'My Boundaries' is visible on the public profile (not just in settings) — making safety a visible product feature builds trust with the users most likely to be cautious about a new social app.",
+      "Onboarding step 1 includes 'You can always change this later' micro-copy — directly addressing commitment anxiety, the most common drop-off trigger at intent-selection in social apps.",
     ],
     decisions: [
-      "Made fitness profile setup mandatory before swiping — users who skip this step produce worse matches and lower retention, and the short-term friction is worth the long-term product integrity",
-      "Chose activity-based match prompts ('Would you spot them on squats?') over generic icebreakers to reinforce unique product positioning from the first interaction",
-      "Deprioritized a standard swipe pattern in favor of a compatibility score display — differentiating from Tinder-style mechanics to signal this is a different kind of product",
+      "Fitness profile setup is mandatory before swiping — short-term onboarding friction accepted for long-term product integrity. Users who skip fitness setup match worse and retain less. The gate is worth it.",
+      "Training stats above the photo on every match card — this was non-negotiable. Tested with the stats below and the product became indistinguishable from every other dating app. The hierarchy is the product.",
+      "Pending Invites and Confirmed Sessions are separate labeled sections on the This Week screen — pending requires a decision, confirmed surfaces time-sensitive actions (Message, Get Directions). The distinction matters.",
+      "Geolocation gym matching and wearable sync deferred to V2 — both would have required the UI to promise functionality that doesn't exist yet. Scoping to what's designable and buildable made the product honest.",
     ],
     outcome:
-      "A product that demonstrates how niche targeting and lifestyle-driven UX can create a compelling alternative to generalist platforms. The design shows strong systems thinking — matching logic, safety patterns, inclusivity, and conversion all resolved in one cohesive flow.",
+      "Spotter is a fully designed social product that resolves competing priorities — matching logic, safety, inclusivity, and conversion — into a single coherent system. The onboarding flow, match card, scheduling feature, and safety patterns are all realized end-to-end. The design has a clear point of view about what this product is and exactly who it's for.",
     nextSteps: [
       "Gym geolocation matching via Google Maps API to surface nearby-gym compatibility",
       "Wearable data integration (Apple Watch / Garmin) for verified, dynamic training stats",
@@ -403,7 +407,7 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
 
   artifex: {
     title: "Artifex",
-    tagline: "AI-Powered Design Ideation Software",
+    tagline: "AI design direction tool — strategy, not just aesthetics",
     role: "UX Designer, Product Designer",
     platform: "Web Software (SaaS)",
     timeline: "3 weeks",
@@ -412,11 +416,11 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     image: artifexImg,
     slug: "artifex",
     overview:
-      "Artifex is an AI-powered design direction tool that transforms project briefs into strategic visual recommendations — including color systems, typography pairings, and curated direction rationale — in minutes, not days.",
+      "Artifex turns a structured project brief into three named design directions — each with a color system, typography pairing, and written strategic rationale — in minutes. It's built for designers and founders who need to establish visual direction fast without mood board rabbit holes, random AI image outputs, or expensive brand agency retainers. The output is formatted for immediate use in a Figma file or client presentation.",
     problem:
-      "Early-stage designers and solo founders waste weeks trying to establish visual direction for new products. Mood boards take hours to build, and AI image tools produce aesthetically random results with no strategic rationale. The result is either decision paralysis or expensive agency engagements for what should be a fast, confident first step.",
+      "Early-stage visual direction is broken for most product teams. AI image generators produce aesthetically random results with no strategic logic. Mood boards take hours and are hard to present. The output of both — disconnected visuals — doesn't tell you why a direction is right for your product. The result is decision paralysis, expensive consultants, or just picking whatever looks good this week and regretting it during the next design review.",
     users:
-      "Early-stage product designers and founders who need to move fast, design agencies conducting initial client discovery, and creative leads exploring visual direction before committing to full brand work.",
+      "Early-stage product designers and founders who need fast, defensible visual direction decisions. Design agencies running initial discovery. Creative leads exploring multiple directions before committing to a full brand system. The common thread: they need to move quickly and they need to be able to explain why.",
     goals: [
       "Turn a structured project brief into 3 strategic design directions with clear rationale — not random AI imagery",
       "Make the input flow feel fast and structured, eliminating blank-page anxiety without exposing prompt engineering",
@@ -432,26 +436,27 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
     myRole:
       "Led UX design and product strategy. Defined the core user flow, designed the input/output system, and established the visual design language for the product itself — which needed to demonstrate the quality it claimed to produce.",
     solution:
-      "A SaaS web application that guides users through a structured project brief input, then generates three curated design directions with clear strategic rationale — not just aesthetic outputs or image dumps.",
+      "A SaaS web application where a guided brief input (industry, audience, tone, platform) feeds an AI generation engine that returns exactly three named design directions — Bold, Refined, Experimental — each with a complete system: color palette, typography pairing, descriptive tags, and a written strategic rationale. The output is formatted for immediate use in a client presentation or Figma file, not just a screenshot to screenshot.",
     designApproach: [
-      "Started with the output experience, not the input — designed what a great 'design direction card' looks like before designing how to generate one",
-      "Built the input flow as a progressive guided questionnaire (tone, industry, audience, constraints) to structure AI outputs without exposing prompt engineering to users",
-      "Explored multiple output display formats before settling on a three-direction model (Bold / Refined / Experimental) that mirrors how creative directors naturally present options",
-      "Designed the product's own visual identity as a portfolio piece — clean, design-forward, and confident in its own aesthetic",
+      "Started with the output card, not the input form. Designed what a complete, immediately-usable design direction looks like before building anything that generates it. If the output can't go straight into a client deck, the product fails regardless of how smart the AI is.",
+      "Explored free-text prompt input versus guided structured questions. Guided won — it constrains outputs for consistent quality, removes blank-page anxiety for less experienced users, and means the product works the same way every time regardless of prompt-writing skill.",
+      "Tested two, three, four, and five directions in layout explorations. Three mirrors how creative directors naturally present options — enough specificity to be useful, few enough to force a decision. Five created the same paralysis the product was built to solve.",
+      "Designed the product's interface to demonstrate the quality it claims to produce. A tool that promises to help you establish visual credibility cannot have mediocre UI. The product is simultaneously a tool and a proof of concept.",
     ],
     designRationale: [
-      "Output structured as three named directions, not infinite options — constraint drives decision-making and prevents the creative paralysis that unlimited AI generation creates",
-      "Each direction card includes a named rationale section explaining the strategic thinking behind the aesthetic, making it useful in client presentations and design reviews",
-      "Typography previews render in context (headline, body, caption hierarchy) rather than font specimens — designers need to see application, not just typefaces",
-      "Export-ready format is built into the output design from the start — a practical decision that respects how designers actually integrate inspiration into their workflow",
+      "Three named directions always — 'Bold / Refined / Experimental' as named archetypes gives users a framework for discussing direction, not just scrolling and picking. The naming does strategic work.",
+      "Each direction card includes a written rationale paragraph — this is the core differentiator. Knowing why a direction is right for your product is more valuable than knowing what it looks like.",
+      "Pill selectors for Industry and Platform Type instead of free-text — removes blank-page anxiety, constrains inputs for consistent outputs, and makes the brief feel fast to complete.",
+      "Ghost CTA ('View Example Output') sits at lower visual weight than the primary — hierarchy is explicit: act first, explore second. No competition between the two paths.",
     ],
     decisions: [
-      "Chose guided structured input over a free-text prompt field — this produces more consistent, higher-quality outputs and reduces user frustration with AI unpredictability",
-      "Capped directions at three to force clarity — showing ten options would undermine the core product promise of reducing creative decision fatigue",
-      "Designed the interface to feel like a premium design tool, not a ChatGPT wrapper — visual quality signals credibility when your entire product promise is about visual quality",
+      "Guided structured input over free-text prompt — the product takes the prompt-engineering expertise burden off the user. Quality outputs shouldn't require knowing how to write a good AI prompt.",
+      "Exactly three directions — tested more, landed on three. The constraint is the product. Unlimited generation recreates the decision fatigue Artifex exists to eliminate.",
+      "Written strategic rationale in every direction card — this is what separates Artifex from a mood board generator. Designers need to defend their direction choices. The rationale card gives them the language to do it.",
+      "Product UI is intentionally design-forward — a design direction tool with weak visual design is self-refuting. The interface had to practice what the product preaches.",
     ],
     outcome:
-      "A product that demonstrates design systems thinking, AI-product strategy, and high-craft visual execution in a single case study. Artifex shows the ability to design the product and understand the product — a critical skill set for design roles adjacent to AI and emerging technology.",
+      "Artifex is a fully realized SaaS product — brief input flow, three-direction output system, and a product identity that practices what it preaches. The design shows the ability to work with AI-powered products: structuring inputs for consistent outputs, making AI results immediately actionable, and building around the real user workflow rather than the technology. It is a portfolio piece and a proof of concept simultaneously.",
     nextSteps: [
       "React + TypeScript front-end implementation with a live public demo",
       "OpenAI API backend for dynamic direction generation based on structured brief inputs",
