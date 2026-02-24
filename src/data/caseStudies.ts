@@ -534,6 +534,20 @@ export const caseStudyDetails: Record<string, CaseStudyDetail> = {
       "Each direction card in the Example Output delivers a complete package — color swatches, typography pairing, descriptive tags, and strategic rationale — making every output immediately usable in a client presentation, not just visually interesting.",
       "The footer credits 'Designed by Jasmine' — the product itself is a portfolio piece, and signing it is a deliberate signal of craft ownership and confidence in the work.",
     ],
+    links: [
+      {
+        label: "View Live App",
+        url: "https://artifex-umber.vercel.app",
+        description: "Deployed web build of the Artifex product design",
+        primary: true,
+      },
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/jasmineblackdev",
+        description: "Source code and project structure",
+        primary: false,
+      },
+    ],
   },
 };
 
