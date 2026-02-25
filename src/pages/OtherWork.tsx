@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import megaflexImg from "@/assets/megaflex-mockup.jpg";
 import metabolicImg from "@/assets/metabolic-mockup.jpg";
 import megaflexBeforeHero from "@/assets/megaflex-before-hero.png";
@@ -25,6 +26,7 @@ interface OtherProject {
   after?: { src: string; caption: string }[];
   designRationale?: string[];
   points: string[];
+  liveUrl?: string;
 }
 
 const projects: OtherProject[] = [
@@ -33,6 +35,7 @@ const projects: OtherProject[] = [
     subtitle: "Website Redesign",
     role: "UX/UI Designer",
     type: "Client Project — Web",
+    liveUrl: "https://megaflex-gym.vercel.app",
     overview:
       "MegaFlex Gym is a Charlotte, NC-based independent gym with 400+ members and two locations. The existing site lacked a clear visual identity, buried key information in long paragraphs, and gave first-time visitors no obvious path to becoming a member. The redesign focused on projecting the gym's hardcore identity, structuring information for intent-driven visitors, and surfacing a clear conversion path.",
     image: megaflexImg,
@@ -215,6 +218,23 @@ const OtherWork = () => {
                 ))}
               </ul>
             </div>
+
+            {/* View Project */}
+            {project.liveUrl && (
+              <div className="pt-6 border-t border-border">
+                <p className="text-xs font-body font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+                  View Project
+                </p>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-body bg-accent text-white hover:opacity-90 transition-opacity"
+                >
+                  <ExternalLink size={14} /> View Live Site
+                </a>
+              </div>
+            )}
           </motion.div>
         ))}
       </div>
