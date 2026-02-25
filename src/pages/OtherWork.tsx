@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import megaflexImg from "@/assets/megaflex-mockup.jpg";
 import metabolicImg from "@/assets/metabolic-mockup.jpg";
 import megaflexBeforeHero from "@/assets/megaflex-before-hero.png";
@@ -27,6 +27,7 @@ interface OtherProject {
   designRationale?: string[];
   points: string[];
   liveUrl?: string;
+  liveLabel?: string;
 }
 
 const projects: OtherProject[] = [
@@ -226,14 +227,27 @@ const OtherWork = () => {
                 <p className="text-xs font-body font-semibold uppercase tracking-widest text-muted-foreground mb-4">
                   View Project
                 </p>
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-body bg-accent text-white hover:opacity-90 transition-opacity"
-                >
-                  <ExternalLink size={14} /> View Live Site
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-body bg-accent text-white hover:opacity-90 transition-opacity"
+                  >
+                    <ExternalLink size={14} /> View Live Site
+                  </a>
+                  <a
+                    href="https://github.com/jasmineblackdev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-body border border-border text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                  >
+                    <Github size={14} /> GitHub Repository
+                  </a>
+                </div>
+                <p className="text-xs text-muted-foreground font-body mt-3 leading-relaxed">
+                  Deployed web build of the {project.title} redesign
+                </p>
               </div>
             )}
           </motion.div>
