@@ -129,11 +129,18 @@ const CaseStudyDetail = () => {
         {/* Screenshots + Screen-level Rationale */}
         {study.screenshots && study.screenshots.length > 0 && (
           <div>
-            <h2 className="font-display text-2xl font-bold text-foreground mb-2">Final UI Screens</h2>
+            {study.screenshotRationale && (
+              <BulletSection
+                title="Design Rationale"
+                description="Key hierarchy, spacing, and usability decisions — and why they were made."
+                items={study.screenshotRationale}
+              />
+            )}
+            <h2 className="font-display text-2xl font-bold text-foreground mb-2 mt-12">Final UI Screens</h2>
             <p className="text-muted-foreground font-body text-sm mb-6 leading-relaxed">
               High-fidelity screens from the final product design.
             </p>
-            <div className={`grid gap-4 mb-10 ${(study.screenshotColumns ?? 2) === 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+            <div className={`grid gap-4 ${(study.screenshotColumns ?? 2) === 3 ? "grid-cols-3" : "grid-cols-2"}`}>
               {study.screenshots.map((s) => (
                 <div key={s.caption} className="flex flex-col gap-2">
                   <img
@@ -146,13 +153,6 @@ const CaseStudyDetail = () => {
                 </div>
               ))}
             </div>
-            {study.screenshotRationale && (
-              <BulletSection
-                title="Design Rationale"
-                description="Key hierarchy, spacing, and usability decisions visible in the screens above — and why they were made."
-                items={study.screenshotRationale}
-              />
-            )}
           </div>
         )}
 
