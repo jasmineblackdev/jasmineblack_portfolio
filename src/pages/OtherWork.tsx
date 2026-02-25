@@ -70,6 +70,7 @@ const projects: OtherProject[] = [
     subtitle: "Website Redesign",
     role: "UX/UI Designer",
     type: "Client Project — Web",
+    liveUrl: "https://metabolic-reset-clinic.vercel.app",
     overview:
       "Metabolic Reset Clinic is a faith-based medical wellness practice in Matthews, NC offering physician-supervised weight loss, chronic disease management, and metabolic health programs. The existing site triggered an email capture popup on page load, lacked visible credibility signals, and buried the highest-converting service (weight loss) inside a generic services dropdown. The redesign rebuilt first impressions around trust, surfaced the clinic's strongest differentiators above the fold, and created a clear path from landing to appointment.",
     image: metabolicImg,
